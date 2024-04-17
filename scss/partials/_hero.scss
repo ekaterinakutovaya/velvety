@@ -1,71 +1,166 @@
 .hero {
-  width: 100%;
   height: 100vh;
-  min-height: 100vh;
-  position: relative;
-  border: 1px dotted red;
+  max-height: 100vh;
 
-  &__content {
+  position: relative;
+
+  &__bg-wrapper {
+    display: flex;
+    align-items: center;
+
     position: absolute;
     top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
   }
 
-  &__inner {
-    width: 100%;
-    display: flex;
-    border: 1px dotted red;
-  }
+  &__left {
+    width: 0;
+    height: 0;
+    max-height: 100vh;
+    background-color: var(--green-40);
 
-  &__image {
-    width: 30%;
-  }
-
-  &__text {
-    width: 70%;
-  }
-
-  &__bg {
-    width: 100%;
-    height: 100vh;
-    min-height: 100vh;
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-position: relative;
-
-  }
-
-  &__left-bg {
-    display: none;
-
-    @media screen and (min-width: 1024px) {
-      display: block;
+    @media screen and (min-width: 728px) {
       width: 50%;
       height: 100%;
-      background-color: var(--green-40);
+
+      position: absolute;
+
     }
   }
 
-  &__right-bg {
+  &__right {
+    width: 50%;
+    height: 100%;
+    max-height: 100vh;
+
+    position: absolute;
+    left: 50%;
+  }
+
+  &__bg-img {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    overflow: hidden;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+  }
 
-    @media screen and (min-width: 1024px) {
-      width: 50%;
+  &__content {
+  }
+
+  &__inner {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+
+
+  }
+
+  &__controls {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+  }
+
+  &__image-wrapper {
+    width: 50%;
+  }
+
+  &__text-wrapper {
+    width: 100%;
+  }
+
+  &__image {
+    width: 231px;
+    max-width: 100%;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fly 4s ease-in-out infinite;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    margin-bottom: 90px;
+
+    color: var(--green-0);
+
+    .first, .second, .third {
+      display: inline-block;
+      width: 805px;
+      height: 119px;
+      position: relative;
+      overflow: hidden;
+
+      span {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 20%;
+  }
+}
+
+.slider {
+
+  &__controls {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  &__dots {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 16px;
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: var(--green-0);
+    transform: rotate(45deg);
+    border: 4px solid var(--green-0);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--green-100);
+      border: 4px solid var(--green-100);
+    }
+
+    &.active {
+      background-color: var(--green-100);
+      border: 4px solid var(--green-100);
     }
   }
 }

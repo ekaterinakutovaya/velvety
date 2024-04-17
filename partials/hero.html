@@ -1,23 +1,58 @@
 <section class="hero">
-  <div class="hero__bg">
-    <div class="hero__content">
-      <div class="container">
-        <div class="hero__inner">
-          <div class="hero__image">img</div>
-          <div class="hero__text">
-            <h1>Let nature take care of your body and soul</h1>
-            
-            <button>Shop now</button>
+  <div class="hero__content">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="slider__controls">
+          <button class="controls__right">
+            <svg class="icon icon-arrow icon-arrow--light flip-horizontal">
+              <use xlink:href="../assets/icons/svg-sprite.svg#arrow"></use>
+            </svg>
+          </button>
+
+          <div class="slider__dots">
+            <span class="slider__dot active"></span>
+            <span class="slider__dot"></span>
+            <span class="slider__dot"></span>
+          </div>
+
+          <button class="controls__left">
+            <svg class="icon icon-arrow icon-arrow--light">
+              <use xlink:href="../assets/icons/svg-sprite.svg#arrow"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="hero__image-wrapper">
+          <div class="hero__image">
+            <img src="../assets/images/hero/hero_image.png" alt="hero-image" />
           </div>
         </div>
-        
+        <div class="hero__text-wrapper">
+          <h1 class="hero__title">
+            <span class="first"><span>Let nature take</span></span>
+            <span class="second"><span>care of your body</span></span>
+            <span class="third"><span>and soul</span></span>
+          </h1>
+          
+          <div class="hero__btn">
+            <button class=" primary-btn">
+              <span>Shop now</span>
+              <svg class="icon icon-arrow icon-arrow--dark">
+                <use xlink:href="../assets/icons/svg-sprite.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    
-    
-    <div class="hero__left-bg"></div>
-    <div class="hero__right-bg">
-      <img src="../assets/images/hero/hero-img.jpg" alt="hero" />
+  </div>
+
+  <div class="hero__bg-wrapper">
+    <div class="hero__left"></div>
+    <div class="hero__right">
+      <div class="hero__bg-img">
+        <img src="../assets/images/hero/hero-bg.jpg" alt="hero" />
+      </div>
     </div>
   </div>
 </section>

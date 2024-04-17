@@ -1,0 +1,25 @@
+.icon {
+  display: inline-block;
+}
+
+.icon-arrow {
+  width: 30px;
+  height: 20px;
+
+  svg {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &--light {
+    --icon-fill: var(--green-0);
+
+    &:hover {
+      --icon-fill: var(--green-100);
+    }
+  }
+
+  &--dark {
+    --icon-fill: var(--green-100);
+  }
+}
