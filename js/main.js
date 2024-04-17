@@ -1,7 +1,8 @@
 import "remixicon/fonts/remixicon.css";
-import { introAnimation } from "./animations.js";
+import { floatAnimation, introAnimation } from "./animations.js";
 
 introAnimation();
+floatAnimation();
 
 const slides = document.querySelectorAll(".slide");
 console.log(slides.length);

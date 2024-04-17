@@ -59,3 +59,13 @@ export function introAnimation() {
 export function slideAnimation() {
   const tl = new gsap.timeline();
 }
+
+export function floatAnimation() {
+  const tl = new gsap.timeline({ repeat: -1, yoyo: true });
+
+  tl.to(".hero__image", {
+    duration: 3,
+    y: "-=20",
+    ease: "power3.inOut",
+  });
+}
