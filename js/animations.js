@@ -55,3 +55,7 @@ export function introAnimation() {
       ease: "power3.inOut",
     });
 }
+
+export function slideAnimation() {
+  const tl = new gsap.timeline();
+}
