@@ -27,17 +27,20 @@
       height: 100%;
 
       position: absolute;
-
     }
   }
 
   &__right {
-    width: 50%;
+    width: 100%;
     height: 100%;
     max-height: 100vh;
 
-    position: absolute;
-    left: 50%;
+    @media screen and (min-width: 728px) {
+      width: 50%;
+
+      position: absolute;
+      left: 50%;
+    }
   }
 
   &__bg-img {
@@ -65,36 +68,42 @@
     justify-content: space-between;
 
     position: relative;
-
-
-  }
-
-  &__controls {
-    position: absolute;
-    top: 50%;
-    left: -10%;
   }
 
   &__image-wrapper {
-    width: 50%;
+    display: none;
+
+    @media screen and (min-width: 728px) {
+      display: block;
+      width: 50%;
+    }
   }
 
   &__text-wrapper {
-    width: 100%;
+    display: none;
+    @media screen and (min-width: 728px) {
+      display: block;
+      width: 100%;
+    }
   }
 
   &__image {
-    width: 231px;
-    max-width: 100%;
+    display: none;
 
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: fly 4s ease-in-out infinite;
+    @media screen and (min-width: 728px) {
+      display: block;
+      width: 231px;
+      max-width: 100%;
 
-    img {
-      height: 100%;
-      object-fit: contain;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: fly 4s ease-in-out infinite;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 
@@ -103,7 +112,9 @@
 
     color: var(--green-0);
 
-    .first, .second, .third {
+    .first,
+    .second,
+    .third {
       display: inline-block;
       width: 805px;
       height: 119px;
@@ -124,16 +135,19 @@
 }
 
 .slider {
-
   &__controls {
-    position: absolute;
-    top: 50%;
-    left: -10%;
-    transform: translateY(-50%);
+    display: none;
 
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
+    @media screen and (min-width: 728px) {
+      position: absolute;
+      top: 50%;
+      left: -10%;
+      transform: translateY(-50%);
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+    }
   }
 
   &__dots {
