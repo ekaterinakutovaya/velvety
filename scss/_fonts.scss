@@ -10,6 +10,6 @@
   }
 }
 
-@include font-face('Ivy Mode Light', '../assets/fonts/ivy-mode/IvyMode-Light', $font-weight: 300, $font-style: normal);
-@include font-face('Aileron Regular', '../assets/fonts/aileron/Aileron-Regular', $font-weight: 400, $font-style: normal);
-@include font-face('Aileron Light', '../assets/fonts/aileron/Aileron-Light', $font-weight: 400, $font-style: normal);
+@include font-face('Ivy Mode Light', '/assets/fonts/ivy-mode/IvyMode-Light', $font-weight: 300, $font-style: normal);
+@include font-face('Aileron Regular', '/assets/fonts/aileron/Aileron-Regular', $font-weight: 400, $font-style: normal);
+@include font-face('Aileron Light', '/assets/fonts/aileron/Aileron-Light', $font-weight: 400, $font-style: normal);
