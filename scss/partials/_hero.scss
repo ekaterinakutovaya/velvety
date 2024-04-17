@@ -102,12 +102,12 @@
   }
 
   &__image {
-    //width: 150px;
     position: absolute;
     height: 250px;
-    top: 40%;
-    left: 50%;
+    top: 55%;
+    left: 40%;
     transform: translateX(-50%);
+    animation: fly 4s ease-in-out infinite;
 
     img {
       width: auto;
@@ -123,10 +123,6 @@
       top: 50%;
       left: 10%;
       transform: translateY(-50%);
-      animation: fly 4s ease-in-out infinite;
-      -webkit-animation: fly 4s ease-in-out infinite; /* Safari and older Chrome browsers */
-      -moz-animation: fly 4s ease-in-out infinite; /* Older Firefox browsers */
-      -o-animation: fly 4s ease-in-out infinite; /* Older Opera browsers */
     }
   }
 
