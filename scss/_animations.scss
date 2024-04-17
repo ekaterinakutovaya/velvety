@@ -9,3 +9,39 @@
     transform: translateY(-51%);
   }
 }
+
+@-webkit-keyframes fly { /* Safari and older Chrome browsers */
+  0% {
+    -webkit-transform: translateY(-51%);
+  }
+  50% {
+    -webkit-transform: translateY(-54%);
+  }
+  100% {
+    -webkit-transform: translateY(-51%);
+  }
+}
+
+@-moz-keyframes fly { /* Older Firefox browsers */
+  0% {
+    -moz-transform: translateY(-51%);
+  }
+  50% {
+    -moz-transform: translateY(-54%);
+  }
+  100% {
+    -moz-transform: translateY(-51%);
+  }
+}
+
+@-o-keyframes fly { /* Older Opera browsers */
+  0% {
+    -o-transform: translateY(-51%);
+  }
+  50% {
+    -o-transform: translateY(-54%);
+  }
+  100% {
+    -o-transform: translateY(-51%);
+  }
+}
