@@ -17,11 +17,6 @@ export function introAnimation() {
       },
       "<",
     )
-    .from(".hero__image", {
-      y: 20,
-      opacity: 0,
-      ease: "power3.inOut",
-    })
     .from(".first span", {
       y: 150,
       opacity: 0,
@@ -48,6 +43,11 @@ export function introAnimation() {
       },
       "<",
     )
+    .from(".hero__image", {
+      y: 20,
+      opacity: 0,
+      ease: "power3.inOut",
+    })
     .from(".hero__btn", {
       x: -30,
       opacity: 0,
