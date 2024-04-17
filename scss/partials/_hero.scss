@@ -183,15 +183,19 @@
 
 .slider {
   &__controls {
-    display: none;
+    position: absolute;
+    bottom: -10%;
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
 
     @media screen and (min-width: 728px) {
-      position: absolute;
+      bottom: unset;
       top: 50%;
       left: -10%;
       transform: translateY(-50%);
 
-      display: flex;
       flex-direction: column;
       row-gap: 24px;
     }
@@ -199,10 +203,15 @@
 
   &__dots {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    row-gap: 16px;
+    column-gap: 16px;
+
+    @media screen and (min-width: 728px) {
+      flex-direction: column;
+      row-gap: 16px;
+    }
   }
 
   &__dot {
@@ -215,13 +224,31 @@
     cursor: pointer;
 
     &:hover {
-      background-color: var(--green-100);
-      border: 4px solid var(--green-100);
+      background-color: var(--green-40);
+      border: 4px solid var(--green-40);
+
+      @media screen and (min-width: 728px) {
+        background-color: var(--green-100);
+        border: 4px solid var(--green-100);
+      }
     }
 
     &.active {
-      background-color: var(--green-100);
-      border: 4px solid var(--green-100);
+      background-color: var(--green-40);
+      border: 4px solid var(--green-40);
+
+      @media screen and (min-width: 728px) {
+        background-color: var(--green-100);
+        border: 4px solid var(--green-100);
+      }
     }
+  }
+}
+
+.controls__left, .controls__right {
+  display: none;
+
+  @media screen and (min-width: 728px) {
+    display: block;
   }
 }
