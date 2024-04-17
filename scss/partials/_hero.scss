@@ -104,7 +104,7 @@
     width: 150px;
     position: absolute;
     height: 250px;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -173,7 +173,7 @@
   &__btn {
     width: 100%;
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
 
     @media screen and (min-width: 728px) {
       width: unset;
@@ -185,7 +185,7 @@
 .slider {
   &__controls {
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 10%;
 
     display: flex;
