@@ -56,16 +56,12 @@ export function introAnimation() {
     });
 }
 
-export function slideAnimation() {
+export function imageSlideOut(currentImage) {
   const tl = new gsap.timeline();
-}
 
-export function floatAnimation() {
-  const tl = new gsap.timeline({ repeat: -1, yoyo: true });
-
-  tl.from(".hero__image", {
-    duration: 3,
-    y: "-=20",
-    ease: "power3.inOut",
+  tl.to(currentImage, {
+    x: -100,
+    autoAlpha: 0,
+    duration: 1,
   });
 }
