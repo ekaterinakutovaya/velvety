@@ -1,8 +1,10 @@
-<header class="header">
+<header id="header" class="header">
   
     <div class="header__inner">
       <a href="/" class="header__logo">
-        <img src="../assets/icons/logo.svg" alt="logo" />
+        <svg>
+          <use xlink:href="/assets/icons/svg-sprite.svg#logo"></use>
+        </svg>
       </a>
 
       <nav class="header__navbar">
@@ -16,8 +18,19 @@
           <li><a href="#">cart(0)</a></li>
         </ul>
       </nav>
+      
+      <nav class="mobile-menu" id="nav-menu">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">pages</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">shop</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">about</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">cart(0)</a></li>
+        </ul>
+        
+        <button class="primary-btn primary-btn--outlined">Log in</button>
+      </nav>
 
-      <button class="burger-btn">
+      <button class="burger-btn" id="nav-trigger-btn">
         <i class="ri-menu-line"></i>
       </button>
     </div>

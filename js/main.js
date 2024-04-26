@@ -22,3 +22,22 @@ heroSlider.on("slideChange", () => {
 
   animateHeroSlide(titleFirstLine, titleSecondLine, titleThirdLine, heroButton);
 });
+
+//********** Mobile Menu ************************
+const header = document.querySelector("#header");
+const navTriggerBtn = document.querySelector("#nav-trigger-btn");
+const navTriggerIcon = navTriggerBtn.querySelector("i");
+const navMenu = document.querySelector("#nav-menu");
+
+navTriggerBtn.addEventListener("click", function () {
+  header.classList.toggle("header-light");
+  navMenu.classList.toggle("nav-is-open");
+
+  if (navTriggerIcon.classList.contains("ri-menu-line")) {
+    navTriggerIcon.classList.remove("ri-menu-line");
+    navTriggerIcon.classList.add("ri-close-large-line");
+  } else {
+    navTriggerIcon.classList.remove("ri-close-large-line");
+    navTriggerIcon.classList.add("ri-menu-line");
+  }
+});

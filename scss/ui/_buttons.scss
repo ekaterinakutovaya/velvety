@@ -31,4 +31,9 @@
 
     margin: unset;
   }
+
+  &--outlined {
+    border: 1px solid var(--green-100);
+    width: 100%;
+  }
 }
