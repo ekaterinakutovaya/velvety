@@ -30,6 +30,7 @@ heroSlider.on("slideChange", () => {
     heroButton,
     heroPrevButton,
     heroNextButton,
+    heroSlider,
   );
 });
 

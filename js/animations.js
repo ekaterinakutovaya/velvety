@@ -63,17 +63,26 @@ export function animateHeroSlide(
   button,
   prevButton,
   nextButton,
+  swiperInstance,
 ) {
   const tl = new gsap.timeline({
     onStart: () => {
       // Disable buttons at the start of the animation
       prevButton.disabled = true;
       nextButton.disabled = true;
+      // Disable swiping when the animation starts
+      swiperInstance.allowTouchMove = false;
+      swiperInstance.navigation.prevEl.disabled = true;
+      swiperInstance.navigation.nextEl.disabled = true;
     },
     onComplete: () => {
       // Enable buttons after the animation is complete
       prevButton.disabled = false;
       nextButton.disabled = false;
+      // Enable swiping once the animation completes
+      swiperInstance.allowTouchMove = true;
+      swiperInstance.navigation.prevEl.disabled = false;
+      swiperInstance.navigation.nextEl.disabled = false;
     },
   });
 
