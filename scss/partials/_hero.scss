@@ -208,6 +208,14 @@
     }
   }
 
+  &__prev-btn {
+    &:hover, &:focus, &:active {
+      path {
+        --icon-fill: var(--green-100);
+      }
+    }
+  }
+
   &__dots {
     position: static !important;
     display: flex;
