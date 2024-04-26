@@ -208,13 +208,13 @@
     }
   }
 
-  &__prev-btn {
-    &:hover, &:focus, &:active {
-      path {
-        --icon-fill: var(--green-100);
-      }
-    }
-  }
+  //&__prev-btn {
+  //  &:active {
+  //    svg path {
+  //      --icon-fill: var(--green-100);
+  //    }
+  //  }
+  //}
 
   &__dots {
     position: static !important;
@@ -309,4 +309,15 @@
       object-fit: cover;
     }
   }
+}
+
+
+.hero__prev-btn svg path,
+.hero__next-btn svg path {
+  fill: var(--icon-fill);
+}
+
+.hero__prev-btn:active svg path,
+.hero__next-btn:active svg path {
+  --icon-fill: var(--green-100);
 }
