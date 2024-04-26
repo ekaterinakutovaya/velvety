@@ -18,9 +18,11 @@
 
   transition: all 0.3s ease-in-out;
 
-  &:hover {
-    background: var(--surface-color);
-    border: 1px solid var(--green-100);
+  @media screen and (min-width: 1280px) {
+    &:hover {
+      background: var(--surface-color);
+      border: 1px solid var(--green-100);
+    }
   }
 
   @media screen and (min-width: 728px) {
