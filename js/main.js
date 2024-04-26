@@ -8,6 +8,9 @@ const heroSlider = initSlider(".hero-slider", {
   slidesPerView: 1,
 });
 
+const heroPrevButton = document.querySelector(".hero__prev-btn");
+const heroNextButton = document.querySelector(".hero__next-btn");
+
 heroSlider.on("slideChange", () => {
   const activeIndex = heroSlider.activeIndex;
 
@@ -20,7 +23,14 @@ heroSlider.on("slideChange", () => {
   const titleThirdLine = activeSlide.querySelector(".third-title-line span");
   const heroButton = activeSlide.querySelector(".hero__btn");
 
-  animateHeroSlide(titleFirstLine, titleSecondLine, titleThirdLine, heroButton);
+  animateHeroSlide(
+    titleFirstLine,
+    titleSecondLine,
+    titleThirdLine,
+    heroButton,
+    heroPrevButton,
+    heroNextButton,
+  );
 });
 
 //********** Mobile Menu ************************

@@ -27,19 +27,15 @@ export function initSlider(selector, options) {
     },
     on: {
       init: function () {
-        console.log("swiper initialized");
-
         document
           .querySelector(".hero__prev-btn")
           .addEventListener("click", function () {
-            console.log("Previous button clicked");
             swiper.slidePrev();
           });
 
         document
           .querySelector(".hero__next-btn")
           .addEventListener("click", function () {
-            console.log("Next button clicked");
             swiper.slideNext();
           });
       },

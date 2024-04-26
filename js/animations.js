@@ -61,8 +61,21 @@ export function animateHeroSlide(
   secondTitleLine,
   thirdTitleLine,
   button,
+  prevButton,
+  nextButton,
 ) {
-  const tl = new gsap.timeline();
+  const tl = new gsap.timeline({
+    onStart: () => {
+      // Disable buttons at the start of the animation
+      prevButton.disabled = true;
+      nextButton.disabled = true;
+    },
+    onComplete: () => {
+      // Enable buttons after the animation is complete
+      prevButton.disabled = false;
+      nextButton.disabled = false;
+    },
+  });
 
   tl.from(firstTitleLine, {
     y: 150,
