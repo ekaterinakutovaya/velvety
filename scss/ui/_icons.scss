@@ -22,9 +22,11 @@
     --icon-fill: var(--green-0);
 
 
-    &:hover {
-      transition: all 0.3s ease-in-out;
-      --icon-fill: var(--green-100);
+    @media screen and (min-width: 1280px)  {
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        --icon-fill: var(--green-100);
+      }
     }
   }
 

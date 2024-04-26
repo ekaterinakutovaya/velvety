@@ -15,6 +15,9 @@
     margin: 0 auto;
     padding: 16px;
 
+    @media screen and (min-width: 728px) {
+      padding: 25px;
+    }
     @media screen and (min-width: 1024px) {
       padding: 20px 80px;
     }
@@ -27,7 +30,7 @@
   &__navbar {
     display: none;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
       width: 50%;
       display: flex;
       align-items: center;

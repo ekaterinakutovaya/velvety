@@ -4,7 +4,7 @@
 
   position: relative;
 
-  @media screen and (min-width: 728px) {
+  @media screen and (min-width: 1024px) {
     height: 100vh;
     min-height: 100vh;
   }
@@ -25,7 +25,7 @@
 
     position: relative;
 
-    @media screen and (min-width: 728px) {
+    @media screen and (min-width: 1024px) {
       flex-direction: row;
     }
   }
@@ -34,8 +34,11 @@
     width: 100%;
     order: 1;
 
-    @media screen and (min-width: 728px) {
+    @media screen and (min-width: 1024px) {
       order: 2;
+      width: 55%;
+    }
+    @media screen and (min-width: 1280px) {
       width: 60%;
     }
   }
@@ -48,8 +51,11 @@
     justify-content: center;
     align-items: center;
 
-    @media screen and (min-width: 728px) {
+    @media screen and (min-width: 1024px) {
       order: 1;
+      width: 45%;
+    }
+    @media screen and (min-width: 1366px) {
       width: 40%;
     }
   }
@@ -74,6 +80,18 @@
 
     @media screen and (min-width: 728px) {
       width: 250px;
+      height: 400px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 250px;
+      height: 550px;
+      top: 55%;
+      left: 12%;
+    }
+
+    @media screen and (min-width: 1537px) {
+      width: 250px;
       height: 700px;
       max-width: 100%;
 
@@ -89,13 +107,16 @@
     margin-top: 90px;
 
     @media screen and (min-width: 728px) {
+      margin-top: 150px;
+    }
+    @media screen and (min-width: 1024px) {
       margin-top: 0;
       margin-bottom: 90px;
     }
 
-    .first,
-    .second,
-    .third {
+    .first-title-line,
+    .second-title-line,
+    .third-title-line {
       display: inline-block;
       width: 100%;
       height: 48px;
@@ -111,16 +132,27 @@
       }
 
       @media screen and (min-width: 728px) {
-        width: 805px;
-        height: 119px;
-        position: relative;
-        overflow: hidden;
+        height: 58px;
+      }
+      @media screen and (min-width: 1024px) {
+        height: 78px;
 
         span {
           position: absolute;
           top: 0;
           text-align: unset;
         }
+      }
+
+      @media screen and (min-width: 1280px) {
+        height: 90px;
+      }
+
+      @media screen and (min-width: 1537px) {
+        width: 805px;
+        height: 119px;
+        position: relative;
+        overflow: hidden;
       }
     }
   }
@@ -131,6 +163,12 @@
     bottom: 10%;
 
     @media screen and (min-width: 728px) {
+      button {
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
       width: unset;
       bottom: 20%;
     }
@@ -139,7 +177,6 @@
 
 // ****** Slider controls *******************************
 .hero {
-
   &__slider-controls {
     height: 100dvh;
 
@@ -155,13 +192,18 @@
     justify-content: center;
     row-gap: 30px;
 
-    @media screen and (min-width: 728px) {
+    @media screen and (min-width: 1024px) {
+      left: 4%;
+    }
+    @media screen and (min-width: 1601px) {
       left: -7%;
     }
   }
 
-  .swiper-button-prev, .swiper-button-next {
-    &:after, &:before {
+  .swiper-button-prev,
+  .swiper-button-next {
+    &:after,
+    &:before {
       content: unset;
     }
   }
@@ -173,11 +215,6 @@
     justify-content: center;
     align-items: center;
     row-gap: 16px;
-
-    @media screen and (min-width: 728px) {
-      flex-direction: column;
-      row-gap: 16px;
-    }
   }
 
   &__dot {
@@ -195,25 +232,23 @@
       background-color: var(--green-40);
       border: 4px solid var(--green-40);
 
-      @media screen and (min-width: 728px) {
+      @media screen and (min-width: 1024px) {
         background-color: var(--green-100);
         border: 4px solid var(--green-100);
       }
     }
-
   }
 
   &__dot-active {
     background-color: var(--green-40);
     border: 4px solid var(--green-40);
 
-    @media screen and (min-width: 728px) {
+    @media screen and (min-width: 1024px) {
       background-color: var(--green-100);
       border: 4px solid var(--green-100);
     }
   }
 }
-
 
 // ****** Background *****************************
 .hero {
@@ -235,7 +270,7 @@
     max-height: 100vh;
     background-color: var(--green-40);
 
-    @media screen and (min-width: 728px) {
+    @media screen and (min-width: 1024px) {
       width: 50%;
       height: 100%;
 
@@ -248,7 +283,7 @@
     height: 100%;
     min-height: 100dvh;
 
-    @media screen and (min-width: 728px) {
+    @media screen and (min-width: 1024px) {
       width: 50%;
 
       position: absolute;

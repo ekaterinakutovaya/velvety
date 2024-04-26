@@ -17,14 +17,14 @@ export function introAnimation() {
       },
       "<",
     )
-    .from(".first span", {
+    .from(".first-title-line span", {
       y: 150,
       opacity: 0,
       skewY: 2,
       duration: 1,
     })
     .from(
-      ".second span",
+      ".second-title-line span",
       {
         y: 150,
         opacity: 0,
@@ -34,7 +34,7 @@ export function introAnimation() {
       "<",
     )
     .from(
-      ".third span",
+      ".third-title-line span",
       {
         y: 150,
         opacity: 0,
@@ -56,17 +56,22 @@ export function introAnimation() {
     });
 }
 
-export function animateHeroSlide(first, second, third, button) {
+export function animateHeroSlide(
+  firstTitleLine,
+  secondTitleLine,
+  thirdTitleLine,
+  button,
+) {
   const tl = new gsap.timeline();
 
-  tl.from(first, {
+  tl.from(firstTitleLine, {
     y: 150,
     opacity: 0,
     skewY: 2,
     duration: 1,
   })
     .from(
-      second,
+      secondTitleLine,
       {
         y: 150,
         opacity: 0,
@@ -76,7 +81,7 @@ export function animateHeroSlide(first, second, third, button) {
       "<",
     )
     .from(
-      third,
+      thirdTitleLine,
       {
         y: 150,
         opacity: 0,

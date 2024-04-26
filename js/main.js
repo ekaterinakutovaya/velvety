@@ -15,9 +15,9 @@ heroSlider.on("slideChange", () => {
     `.hero-slider .swiper-slide:nth-child(${activeIndex + 1})`,
   );
 
-  const titleFirstLine = activeSlide.querySelector(".first span");
-  const titleSecondLine = activeSlide.querySelector(".second span");
-  const titleThirdLine = activeSlide.querySelector(".third span");
+  const titleFirstLine = activeSlide.querySelector(".first-title-line span");
+  const titleSecondLine = activeSlide.querySelector(".second-title-line span");
+  const titleThirdLine = activeSlide.querySelector(".third-title-line span");
   const heroButton = activeSlide.querySelector(".hero__btn");
 
   animateHeroSlide(titleFirstLine, titleSecondLine, titleThirdLine, heroButton);
