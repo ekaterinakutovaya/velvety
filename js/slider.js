@@ -18,7 +18,6 @@ export function initSlider(selector, options) {
     },
     pagination: {
       el: ".hero__dots",
-      clickable: true,
       renderBullet: function (index, className) {
         console.log("Rendering bullet for index:", index);
         return '<span class="' + className + ' hero__dot"></span>';
