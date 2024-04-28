@@ -1,8 +1,9 @@
 import "remixicon/fonts/remixicon.css";
 import { animateHeroSlide, introAnimation } from "./animations.js";
 import { initSlider } from "./slider.js";
+import gsap from "gsap";
 
-introAnimation();
+// introAnimation();
 
 const heroSlider = initSlider(".hero-slider", {
   slidesPerView: 1,
@@ -51,4 +52,26 @@ navTriggerBtn.addEventListener("click", function () {
     navTriggerIcon.classList.remove("ri-close-large-line");
     navTriggerIcon.classList.add("ri-menu-line");
   }
+});
+
+// ************ Menu dropdown *****************************
+const dropdownTriggerBtn = document.querySelector("#dropdown-menu");
+
+export function toggleDropdownMenu() {
+  const dropdownList = document.querySelector("#dropdown-menu-list");
+  const chevronIcon = document.querySelector("#dropdown-menu .chevron-down i");
+
+  if (dropdownList.classList.contains("open")) {
+    dropdownList.classList.remove("open");
+    chevronIcon.classList.remove("ri-arrow-up-s-line");
+    chevronIcon.classList.add("ri-arrow-down-s-line");
+  } else {
+    dropdownList.classList.add("open");
+    chevronIcon.classList.remove("ri-arrow-down-s-line");
+    chevronIcon.classList.add("ri-arrow-up-s-line");
+  }
+}
+
+dropdownTriggerBtn.addEventListener("click", function () {
+  toggleDropdownMenu();
 });

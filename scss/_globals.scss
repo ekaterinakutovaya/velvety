@@ -10,7 +10,8 @@ html {
 
 body {
   font-family: "Aileron Light", sans-serif;
-  font-size: 1.125rem;
+  //font-size: 1.125rem;
+  font-size: clamp(16px, 1.125rem, 1.125rem);
   color: var(--green-100);
   background-color: var(--surface-color);
   position: relative;
@@ -67,11 +68,42 @@ h1 {
   }
 }
 
+h2 {
+  font-family: 'Ivy Mode Light', sans-serif;
+  font-size: 2.5rem;
+  line-height: 120%;
+  font-weight: 300;
+
+  @media screen and (min-width: 1280px)  {
+    font-size: 3.5rem;
+  }
+}
+
 h4 {
   font-family: 'Ivy Mode Light', sans-serif;
   font-size: 2.25rem;
 }
 
+h6 {
+  font-family: 'Aileron Light', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 110%;
+}
+
 .flip-horizontal {
   transform: rotateY(180deg);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.chevron-down.rotate i {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease; // Adding a transition for smooth rotation
+}
+
+.section-margins {
+  margin: 64px 0;
 }

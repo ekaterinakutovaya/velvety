@@ -49,9 +49,11 @@
       justify-content: space-between;
       padding-left: 80px;
 
-      a {
+      a,
+      span, label {
         text-transform: uppercase;
         color: var(--green-0);
+        cursor: pointer;
       }
     }
   }
@@ -60,6 +62,14 @@
     display: flex;
     align-items: center;
     column-gap: 48px;
+
+    span {
+      cursor: pointer;
+    }
+
+    .chevron-down {
+      padding-left: 8px;
+    }
   }
   &__nav-list-last {
     display: flex;
@@ -105,7 +115,7 @@
 
   &__link {
     text-transform: capitalize;
-    font-family: 'Ivy Mode Light', sans-serif;
+    font-family: "Ivy Mode Light", sans-serif;
     font-size: 2.25rem;
   }
 
@@ -119,3 +129,63 @@
   }
 }
 
+.dropdown-menu {
+
+  transition: all 0.3s ease-in-out;
+
+  &__wrapper {
+    position: relative;
+
+    input[type="checkbox"]{
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+
+
+  &__list {
+    //height: 0;
+    //padding: 0;
+    height: 0;
+    opacity: 0;
+    padding: 0;
+    background-color: var(--green-0);
+    position: absolute;
+    top: 180%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -999;
+    margin-top: -20px;
+
+    overflow: hidden;
+    transition: 0.5s ease;
+    transition-property: opacity, height, margin-top;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 40px;
+
+    a {
+      text-transform: capitalize;
+      white-space: nowrap;
+      color: var(--green-80);
+    }
+
+    &.open {
+      height: auto;
+      opacity: 1;
+      padding: 30px;
+      margin-top: 0;
+      //transform: translateX(-8px);
+    }
+  }
+
+
+}
+
+//.chevron-down {
+//  transition: transform 0.5s ease;
+//  transform: rotate(180deg);
+//}
